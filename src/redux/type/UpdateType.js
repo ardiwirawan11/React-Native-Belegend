@@ -1,0 +1,4 @@
+export const REQUEST_UPDATE = 'REQUEST_UPDATE'
+export const SHOW__UPDATE = 'SHOW__UPDATE'
+export const FAILED_UPDATE = 'FAILED_UPDATE'
+export const SUCCESS_UPDATE = 'SUCCESS_UPDATE'

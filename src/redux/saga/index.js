@@ -1,0 +1,40 @@
+import { all, takeLatest } from 'redux-saga/effects';
+import { REQUEST_USER_DATA } from '../type/userType';
+import { getUserData } from './user';
+import { REQUEST_CATEGORY_DATA } from '../type/CategoryType';
+import { getCategoryData } from './category';
+import { REQUEST_ATHLETE_DATA } from '../type/AthleteType';
+import { getAthleteData } from './athlete';
+import { REQUEST_INVESTOR_DATA } from '../type/InvestorType';
+import { getInvestorData } from './investor';
+import { REQUEST_ACHIEVE_DATA } from '../type/AchieveType';
+import { getAchieveData } from './achieve';
+import { REQUEST_SCHOLARSHIP_DATA } from '../type/ScholarshipType';
+import { getScholarshipData } from './scholarship';
+import { REQUEST_DETAIL_DATA } from '../type/DetailType';
+import { getDetailData } from './detail';
+import { REQUEST_MYAPPLY_DATA } from '../type/MyapplyType';
+import { getMyapplyData } from './myapply';
+import { REQUEST_MYSCHOLARSHIP_DATA } from '../type/MyscholarshipType';
+import { getMyscholarshipData } from './myscholarship';
+import { REQUEST_ACCEPTED_DATA } from '../type/AcceptedType';
+import { getAcceptedData } from './accepted';
+import { REQUEST_PATHLETE_DATA } from '../type/ProfileType';
+import { getProfileData } from './profile';
+import { REQUEST_AACHIEVE_DATA } from '../type/AachieveType';
+import { getAachieveData } from './Aachieve';
+
+export default function* IndexSaga() {
+    yield all([takeLatest(REQUEST_USER_DATA, getUserData)]);
+    yield all([takeLatest(REQUEST_CATEGORY_DATA, getCategoryData)]);
+    yield all([takeLatest(REQUEST_ATHLETE_DATA, getAthleteData)]);
+    yield all([takeLatest(REQUEST_INVESTOR_DATA, getInvestorData)]);
+    yield all([takeLatest(REQUEST_ACHIEVE_DATA, getAchieveData)]);
+    yield all([takeLatest(REQUEST_SCHOLARSHIP_DATA, getScholarshipData)]);
+    yield all([takeLatest(REQUEST_DETAIL_DATA, getDetailData)]);
+    yield all([takeLatest(REQUEST_MYAPPLY_DATA, getMyapplyData)]);
+    yield all([takeLatest(REQUEST_MYSCHOLARSHIP_DATA, getMyscholarshipData)]);
+    yield all([takeLatest(REQUEST_ACCEPTED_DATA, getAcceptedData)]);
+    yield all([takeLatest(REQUEST_PATHLETE_DATA, getProfileData)]);
+    yield all([takeLatest(REQUEST_AACHIEVE_DATA, getAachieveData)]);
+}
